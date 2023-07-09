@@ -23,38 +23,52 @@
     </ul>
   </div>
   <main>
-  <div class="img-magnifier-container">
+  <div>
   <center>
-    <img id="myimage" src="https://cdn.pixabay.com/photo/2022/05/08/08/49/treasure-map-7181572_1280.jpg" alt="Treasure Map" height="1000" width="1020" center>
-    <div id="myresult" class="img-magnifier-result"></div>
+    <img border="10" id="myimage" src="https://p0.pxfuel.com/preview/135/991/792/chest-treasure-pirate-money.jpg" alt="Treasure Map" height="400" width="620" center>
   </center>
   </div>
     <h2 id="intructions">Instructions:</h2>
-        <p>Follow the clues to find Mike's hidden treasure! The Rainbow emoji is the treasure.</p>
+        <p>Use the moving gameboard with 8 doors to play the game.</p>
 
     <h3 id="rules">Rules:</h3>
   <ul>
-    <li>Use the game board down below.</li>
-    <li>Follow the clues. </li>
-    <li>Click the squares.</li>
+    <li>Click on the doors to find the treasure.</li>
+    <li>You only get 4 chances. There is a counter for you so you can keep track of the doors you've opened and the doors you have remaining.</li>
+    <li>Pay attention to the alert window on this page and follow the instructions as they appear.</li>
     <li><strong>Find the treasure!</strong></li>
   </ul>
   <h3 id="clues">Clues:</h3>
   <ol>
-    <li>There are tree emoji's.</li>
-    <li>There are bomb emoji's, which is game over.</li>
+    <li>There are tree emoji's, which mean you are still safe to proceed to the next door.</li>
+    <li>There are bomb emoji's, which is game over and you will need to restart the game.</li>
     <li>There is a rainbow emoji, which means you win.</li>
+    <li><strong>SIDE NOTE:</strong> Once a door is opened the shape of the square changes. Becareful these doors are shaking rather fast!</li>
   </ol>
-  <table border="1" style="height: 450px; width: 750px;" id="gameboard">
+  
+  <table border="4" style="height: 100px; width: 100px;">
     <tr>
-      <td id="1" onclick="treasure(1)"><strong>1</strong></td>
-      <td id="2" onclick="treasure(2)"><strong>2</strong></td>
-      <td id="3" onclick="treasure(3)"><strong>3</strong></td>
-      <td id="4" onclick="treasure(4)"><strong>4</strong></td>
-      <td id="5" onclick="treasure(5)"><strong>5</strong></td>
-      <td id="6" onclick="treasure(6)"><strong>6</strong></td>
-      <td id="7" onclick="treasure(7)"><strong>7</strong></td>
-      <td id="8" onclick="treasure(8)"><strong>8</strong></td>
+      <td>Number of clicks</td>
+      <td>Clicks left</td>
+    </tr>
+    <tr>
+      <td id="counter"></td>
+      <td id="countRemain"></td>
+    </tr> 
+  </table>
+  <button id="restart" type="button" onclick="location.reload()">Restart Game</button>
+  <br>
+  <br>
+  <table border="1" id="gameboard">
+    <tr>
+      <td id="1" onclick="treasure(1)"  ><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
+      <td id="2" onclick="treasure(2)"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
+      <td id="3" onclick="treasure(3)"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
+      <td id="4" onclick="treasure(4)"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
+      <td id="5" onclick="treasure(5)"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
+      <td id="6" onclick="treasure(6)"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
+      <td id="7" onclick="treasure(7)"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
+      <td id="8" onclick="treasure(8)"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7820919/door-clipart-md.png" style="height: 150px; width: 150px;"></td>
     </tr>
   </table>
   <a href="https://en.wikipedia.org/wiki/Treasure_hunt" target="_blank">Learn More About Treasure Hunt's</a>
@@ -64,6 +78,5 @@
     <a href="#top"> Go to top</a>
   </footer>
   <script type="text/javascript" src="treasurehunt.js"></script>
-  <button type="button" onclick="location.reload()">Restart Game</button>
 </body>
 </html>
